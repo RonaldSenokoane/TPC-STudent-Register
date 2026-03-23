@@ -1,53 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <title>TPC Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Database</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <img src="images/Logo.png" class="logo" alt="Logo" />
 
-</head>
-<body>
+      <a href="register.html" class="nav-button active">Student Register</a>
+      <a href="database.html" class="nav-button">Student Database</a>
+    </aside>
 
+    <div class="main">
+      <header class="topbar">
+        <div class="left">
+          <a class="fa fa-bars"></a>
 
-<nav class="navcolumn"> 
-
-    <div class="logo">
-        <img src="images/Logo.png" width="100">
-    </div>
-
-
-    <div class="navcolumn-links">
-        <button href="#" class="upper-link" >Student Register</button>
-        <button href="#" class="bottom-link" >Student Database</button>
-    </div>
-
-</nav> 
-
-<div class="content">
-
-<div class="navrow">
-   <div class="navrow-action">
-        <button class="menu-button">
-            <image src="images/menu.png" width="15" ></image>
-        </button>
-        <div class="search-box">
-            <i></i>
-            <input type="text" placeholder="Search Student...">
+          <div class="search-box">
+            <a class="fa fa-search"></a>
+            <input
+              type="text"
+              placeholder="Search student"
+              aria-label="Search student"
+            />
+          </div>
         </div>
-        
-   </div>
 
-</div>
-<footer>
+        <div class="right">
+          <a class="fa fa-bell"></a>
+          <a class="fa fa-comment"></a>
 
-<p>
+          <a class="profile" onclick="gotToProfile()">
+            <div class="profile-icon">P</div>
+            <p>Profile</p>
+          </a>
+        </div>
+      </header>
 
-</p>
+      <main class="content">
+        <h2>Welcome to Student Database</h2>
+        <p>What would you like to do?</p>
 
-</footer>   
-</div>
-
-</body>
+        <div class="buttons">
+          <button id="addStudent">Add New Student</button>
+          <button id="deleteStudent">Delete Student</button>
+          <button id="editStudent">Edit Student Info</button>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
-

@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    display: flex;
+    font-family: arial;
+}
+
+.navbar {
+    width: 150px;
+    height: 100vh;
+    background-color: #243943;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+.nav-links{
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px; 
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none; 
+    padding: 8px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}

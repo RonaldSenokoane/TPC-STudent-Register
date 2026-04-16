@@ -4,7 +4,7 @@ body {
     font-family: arial;
 }
 
-.navbar {
+.navcolumn {
     width: 150px;
     height: 100vh;
     background-color: #243943;
@@ -14,7 +14,15 @@ body {
     flex-direction: column;
 
 }
-.nav-links{
+.navrow {
+    display: flex;
+    height: 100vh;
+    background-color: #740808;
+    padding: 20px;
+    gap: 10px;
+}
+
+.navcolumn-links{
     display: flex; 
     flex-direction: column;
     gap: 15px;
@@ -30,4 +38,16 @@ body {
 .content {
     flex: 1;
     padding: 20px;
+}
+
+.button menu {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.button search {
+    position: absolute;
+    top: 50px;
+    left: 500px;
 }

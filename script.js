@@ -13,6 +13,14 @@ function switchPage(page) {
   managementToggle.classList.toggle('active', !isLogin);
 }
 
+function switchPage(page) {
+  const isManagement = page === 'management login';
+  loginPage.classList.toggle('active-card', !isManagement);
+  managementPage.classList.toggle('active-card', isManagement);
+  loginToggle.classList.toggle('active', !isManagement);
+  managementToggle.classList.toggle('active', isManagement);
+}
+
 loginToggle.addEventListener('click', () => switchPage('login'));
 managementToggle.addEventListener('click', () => switchPage('management'));
 

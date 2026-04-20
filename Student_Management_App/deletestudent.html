@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Database</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <img src="images/Logo.png" class="logo" alt="Logo" />
+
+      <a href="register.html" class="nav-button active">Student Register</a>
+      <a href="database.html" class="nav-button">Student Database</a>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="left">
+          <a class="fa fa-bars"></a>
+
+          <div class="search-box">
+            <a class="fa fa-search"></a>
+            <input
+              type="text"
+              placeholder="Search student"
+              aria-label="Search student"
+            >
+          </div>
+        </div>
+
+        <div class="right">
+          <a class="fa fa-bell"></a>
+          <a class="fa fa-comment"></a>
+
+          <a class="profile" onclick="gotToProfile()">
+            <div class="profile-icon">P</div>
+            <p>Profile</p>
+          </a>
+        </div>
+      </header>
+
+      <main class="content">
+
+        <div class="header">
+        <h1>Welcome to Student Database</h1>
+        <p>Please Select Student to be Deleted</p>
+        </div>
+
+        <div class="search-section">
+            <label>Search Student:</label>
+            <input type="text"
+                   placeholder="Enter student name"
+            >
+            <div class="filter-section">
+                  <label>Filter by Course:</label>
+            <select>
+                <option>All</option>
+                <option>Software Development</option>
+                <option>AI Development</option>
+            </select>
+             
+            <label>Filter by Mode</label>
+            <select>
+                <option>All</option>
+                <option>Online</option>
+                <option>Onsite</option>
+            </select>
+            </div>
+        </div>
+        
+        <div class="delete-student-table-box">
+            <table id="deletetable">
+                <thead>
+                    <tr>
+                        <th>Name & Surname</th>
+                        <th>Course</th>
+                        <th>ID No.</th>
+                        <th>Student No.</th>
+                        <th>SELECT</th>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>
+                            <input type="checkbox" name="selectStudent">
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+
+                  <div class="delete-button-container">
+            <button>DELETE</button>
+        </div>
+            
+
+        </div>
+
+    
+
+      </main>
+    </div>
+  </body>
+</html>

@@ -8,22 +8,10 @@
 </head>
 <body>
   <main class="page-shell">
-    <div class="hero-panel">
-      <div class="hero-copy">
-        <p class="eyebrow">Secure access</p>
-        <h1>Choose your login path</h1>
-        <p>Sign in to your account or use the management portal for administrative access.</p>
-      </div>
-      <div class="switcher">
-        <button id="loginToggle" class="switch-btn active" type="button">Login</button>
-        <button id="managementToggle" class="switch-btn" type="button">Management Login</button>
-      </div>
-    </div>
-
-    <div class="logo">
+        <div class="login-section">
+       <div class="logo">
       <img src="ASSESTS/background.png" alt="Company Logo" width="210" height="160" />
     </div>
-
     <section class="form-panel" aria-label="Authentication forms">
       <article id="loginPage" class="form-card active-card">
         <div class="card-header">
@@ -49,35 +37,9 @@
         </form>
       </article>
 
-      <article id="managementPage" class="form-card">
-        <div class="card-header">
-          <h2>Management Login</h2>
-          <div class="switcher">
-
-          </div>
-          <p>Use your management credentials for admin access and reporting.</p>
-        </div>
-        <form id="managementLoginForm" class="auth-form">
-          <label>
-            Username
-            <input type="text" name="username" placeholder="management user" required />
-          </label>
-          <label>
-            Password
-            <input type="password" name="password" placeholder="Enter your password" required />
-          </label>
-          <label>
-            Branch code
-            <input type="text" name="branch" placeholder="Office / branch code" />
-          </label>
-          <button type="submit" class="primary-btn">Access Portal</button>
-          <p class="form-note">Only authorized personnel should sign in here.</p>
-          <div class="message" aria-live="polite"></div>
-        </form>
-      </article>
     </section>
+    </div>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>

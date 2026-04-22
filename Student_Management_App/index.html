@@ -26,9 +26,11 @@
           <div class="search-box">
             <a class="fa fa-search"></a>
             <input
+        
               type="text"
               placeholder="Search student"
               aria-label="Search student"
+            
             />
           </div>
         </div>
@@ -37,21 +39,20 @@
           <a class="fa fa-bell"></a>
           <a class="fa fa-comment"></a>
 
-          <a class="profile" onclick="gotToProfile()">
+          <a class="profile" id="profileBtn">
             <div class="profile-icon">P</div>
             <p>Profile</p>
           </a>
         </div>
-
-        <div id="profileModel" class="modal">
-          <div class="model-content">
-            <span class="close">&times</span>
-            <button>My Profile</button>
-            <button>Settings</button>
-            <button>sign out</button>
-
-          </div>
-        </div>
+        
+            <div id="profileModal" class="modal">
+     
+              <div class="modal-content">
+              <span class="close">&times;</span>
+              <i class="fa fa-user">Profile</i>
+              <i class="fa-solid fa-gear">Settings</i>
+               <i class="fa-solid fa-right-from-bracket">Sign Out</i>
+           </div>  
 
       </header>
 
@@ -61,10 +62,12 @@
 
         <div class="buttons">
           <button id="addStudent">Add New Student</button>
-          <button id="deleteStudent">Delete Student</button>
+          <a href="deletestudent.html"><button id="deleteStudent">Delete Student</button></a>
+         
           <button id="editStudent">Edit Student Info</button>
         </div>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

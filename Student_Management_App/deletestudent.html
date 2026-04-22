@@ -20,29 +20,36 @@
 
     <div class="main">
       <header class="topbar">
-        <div class="left">
+         <div class="left">
           <a class="fa fa-bars"></a>
 
           <div class="search-box">
-            <a class="fa fa-search"></a>
             <input
               type="text"
               placeholder="Search student"
               aria-label="Search student"
             >
-          </div>
-        </div>
+             </div>
+             </div>
+             <div class="right">
+              <a class="fa fa-bell"></a>
+              <a class="fa fa-comment"></a>
 
-        <div class="right">
-          <a class="fa fa-bell"></a>
-          <a class="fa fa-comment"></a>
-
-          <a class="profile" onclick="gotToProfile()">
+            <a class="profile"  id="profileBtn">
             <div class="profile-icon">P</div>
             <p>Profile</p>
-          </a>
-        </div>
-      </header>
+            </a>
+            </div>
+
+            <div id="profileModal" class="modal">
+     
+              <div class="modal-content">
+              <span class="close">&times;</span>
+              <i class="fa fa-user">Profile</i>
+              <i class="fa-solid fa-gear">Settings</i>
+               <i class="fa-solid fa-right-from-bracket">Sign Out</i>
+           </div>  
+       </header>
 
       <main class="content">
 
@@ -106,5 +113,6 @@
 
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

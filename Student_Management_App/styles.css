@@ -2,7 +2,12 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
-  min-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -104,6 +109,10 @@ body {
   background: #2f4f5a;
 }
 
+.profile-modal {
+  justify-content: center;
+}
+
 .profile-icon {
   width: 35px;
   height: 35px;
@@ -184,6 +193,7 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto;
+  height: 50px;
 
 }
 
@@ -202,10 +212,11 @@ th {
   background: #d9d9d9;
   padding: 40px;
   border-radius: 30px;
-  width: 90%;
-  margin: 40px auto;
+  width: 50%;
+  margin: 100px auto;
   display: flex;
   justify-content: center;
+  height: 100px;
 }
  
 .main-content{
@@ -263,7 +274,7 @@ th {
 .delete-button-container {
   margin-top: 20px;
   display: flex;
-
+  height: 40px;
 }
 
 .delete-button-container button {
@@ -283,8 +294,11 @@ th {
   background-color: #d8b131;
 }
 
-.model {
+.modal {
   display: none;
+  /* center modal content horizontally and vertically */
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -294,12 +308,24 @@ th {
   background-color: rgba(0,0,0,0.5);
 }
 
-.model-content {
+.modal-content {
   background-color: white;
-  margin: 10% auto;
+  /* center the popup exactly in the viewport */
+  margin: 0;
   padding: 20px;
-  width: 300px;
+  width: 90%;
+  max-width: 420px;
   border-radius: 10px;
+  /* keep modal usable on small screens */
+  max-height: 90vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .close {
@@ -307,3 +333,178 @@ th {
   font-size: 22px;
   cursor: pointer;
 }
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  
+  padding: 10px 10px 10px 38px; 
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 250px;
+  margin-left: 15px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%232d89ef' d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16a6.471 6.471 0 004.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 14a4 4 0 110-8 4 4 0 010 8z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 18px 18px;
+}
+
+
+@media (max-width: 400px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50px;
+    margin-bottom: 0;
+  }
+
+  .nav-button {
+    padding: 8px 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .topbar {
+    padding: 0 10px;
+  }
+
+  .search-box input {
+    max-width: calc(100% - 30px);
+    margin-left: 0;
+  }
+
+  .profile {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .buttons {
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .buttons button {
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+
+  .delete-student-table-box {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .main-content{
+    padding: 10px;
+    border-left: none;
+  }
+}
+
+/* Small to medium screens (401px - 768px) */
+@media (min-width: 401px) and (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+    height: 100vh;
+    padding-top: 12px;
+  }
+
+  .logo {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .nav-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .search-box input {
+    max-width: 180px;
+  }
+
+  .filter-section {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .delete-student-table-box {
+    width: 80%;
+    margin: 80px auto;
+  }
+}
+
+/* Medium to large screens (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 160px;
+  }
+
+  .search-box input {
+    max-width: 220px;
+  }
+
+  .delete-student-table-box {
+    width: 70%;
+    margin: 90px auto;
+  }
+}
+
+/* Desktop wide (1025px - 1400px) */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .search-box input {
+    max-width: 250px;
+  }
+
+  .delete-student-table-box {
+    width: 50%;
+  }
+}
+
+/* Small adjustments for tables and lists to remain readable on narrow screens */
+@media (max-width: 768px) {
+  .student-list table,
+  .student-list th,
+  .student-list td {
+    font-size: 13px;
+  }
+
+  .table {
+    height: auto;
+  }
+}
+
+.fa fa-user {
+  display: flex;
+  flex-direction: column;
+ 
+}
+.modal-content i {
+  font-size: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* End responsive rules */

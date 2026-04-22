@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login &amp; Management Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+        <div class="login-section">
+       <div class="logo">
+      <img src="ASSESTS/background.png" alt="Company Logo" width="210" height="160" />
+    </div>
+    <section class="form-panel" aria-label="Authentication forms">
+      <article id="loginPage" class="form-card active-card">
+        <div class="card-header">
+          <h2>User Login</h2>
+          <p>Access your dashboard with your email and password.</p>
+        </div>
+        <form id="userLoginForm" class="auth-form">
+          <label>
+            Email address
+            <input type="email" name="email" placeholder="name@example.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" placeholder="Enter your password" required />
+          </label>
+          <label class="checkbox-field">
+            <input type="checkbox" name="remember" />
+            Remember me
+          </label>
+          <button type="submit" class="primary-btn">Sign in</button>
+          <p class="form-note">Need an account? Contact support to get started.</p>
+          <div class="message" aria-live="polite"></div>
+        </form>
+      </article>
+
+    </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

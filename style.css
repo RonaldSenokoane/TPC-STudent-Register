@@ -1,0 +1,147 @@
+/* General Box Sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+}
+
+/* Body Layout */
+body {
+  align-items: center;
+  padding: 32px !important;
+}
+
+.login-section{
+
+  margin-block: 10%;
+  width: 1000px !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+}
+/* Page Container */
+.page-shell {
+  width: max-content;
+  padding-left: 5%;
+}
+
+/* LOGO SECTION */
+.logo {
+  background-color: #243943;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 36px;
+  border-radius: 24px;
+}
+
+.logo img {
+  max-width: 100%;
+  width: 416px;
+  height: auto;
+}
+
+/* FORM SECTION */
+.form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form Card Styling */
+.form-card {
+  width: 100%;
+  padding: 32px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Header */
+.card-header h2 {
+  margin: 0 0 10px;
+}
+
+.card-header p {
+  margin: 0 0 20px;
+  color: #ca7404;
+}
+
+/* Form Styles */
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #243943;
+}
+
+/* Input Fields */
+.auth-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d7de;
+  background: #f5f7fa;
+  font-size: 1rem;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #243943;
+}
+
+/* Checkbox Field */
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+/* Button */
+.primary-btn {
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  background: #243943;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #1b2f37;
+}
+
+/* Footer Note */
+.form-note {
+  font-size: 0.85rem;
+  color: #ca7404;
+}
+
+/* Message (for login feedback) */
+.message {
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  color: #243943;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+  }
+}
